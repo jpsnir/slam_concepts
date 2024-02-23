@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Dense>
 
 using namespace std;
 
@@ -27,6 +27,8 @@ int main(){
 
     Eigen::Translation2d tt(4, 0);
     Eigen::Translation3d tt3(0, 4 , 0);
+    // Transformation obeys the natural sequence in which they are done
+    // like we write in mathematics. 
     cout << "2d transformation in (r*tt) : \n" << (r*tt).matrix() <<endl;
     cout << "2d transformation in (tt*r) : \n" << (tt*r).matrix() <<endl;
 
@@ -39,6 +41,4 @@ int main(){
     cout << " Pt x  homogeneous : \n" << pt_x.homogeneous() << endl;
     cout << " Isometry 2d : \n " << I.matrix() << endl;
     cout << " Isometry 3d at origin : \n " << I3.matrix() << endl;
-    
-
 }

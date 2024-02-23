@@ -22,5 +22,11 @@ include_directories(${Boost_INCLUDE_DIRS}
                     ${Eigen_INCLUDE_DIRS}
                     ${OpenCV_INCLUDE_DIRS})
 
-add_executable(transformations_1 ./src/transformations.cpp)
-target_link_libraries(transformations_1 ${Boost_LIBRARIES} ${OpenCV_LIBRARIES} Eigen3::Eigen )
+add_executable(transformations_1 ./src/transformations_1.cpp)
+target_link_libraries(transformations_1 Eigen3::Eigen )
+
+add_executable(transformations_2 ./src/transformations_2.cpp)
+target_link_libraries(transformations_2 Eigen3::Eigen )
+
+add_executable(eigen_matrices ./src/eigen_matrices.cpp)
+target_link_libraries(transformations_1 Eigen3::Eigen )
